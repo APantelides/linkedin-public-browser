@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Public LinkedIn Browsing",
+  "description": "This extension allows you to continuously browse public LinkedIn profiles without needing to login/signup",
+  "version": "1.0",
+  "page_action": {
+    "default_icon": "PinB_Full_Logo19.png"
+  },
+  "content_scripts": [
+      {
+          "matches": ["http://www.linkedin.com/in/*", "https://www.linkedin.com/in/*"],
+          "js": ["jquery-3.1.1.slim.min.js", "content.js"]
+      }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
